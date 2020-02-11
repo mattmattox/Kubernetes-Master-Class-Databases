@@ -4,6 +4,9 @@
 ### Create Namespace
 `kubectl apply -f 00-namespace.yml`
 
+### Create secret
+`kubectl -n single-node-mysql create secret generic mysql-pass --from-literal=password=password`
+
 ### Create PVC
 `kubectl apply -f 01-pvc.yml`
 
