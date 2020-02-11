@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: single-node-mysql-pvc
-  namespace: single-node-mysql
+  name: mysql-backup-pvc
+  namespace: mariadb-galera
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: longhorn
+  storageClassName: do-block-storage
   resources:
     requests:
-      storage: 8Gi
+      storage: 100Gi

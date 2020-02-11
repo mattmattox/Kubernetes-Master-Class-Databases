@@ -6,7 +6,7 @@
 `kubectl create namespace mariadb-galera`
 
 ### Install chart
-`helm install mariadb-galera bitnami/mariadb-galera --namespace mariadb-galera -f values-production.yaml --set rootUser.password="Passw0rd" --set db.password="Passw0rd"`
+`helm install mariadb-galera bitnami/mariadb-galera --namespace mariadb-galera -f values.yaml --set rootUser.password="Passw0rd" --set db.password="Passw0rd"`
 
 ## Verify Deployment
 `kubectl get sts -w --namespace mariadb-galera -l app.kubernetes.io/instance=mariadb-galera`
